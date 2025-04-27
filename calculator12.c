@@ -17,9 +17,9 @@ int main() {
     int ans; // for answer.
 
     printf("Okay Got it,\n");
-    printf("Enter first number. > \n");
+    printf("Enter first number. > ");
     scanf("%d",&a);
-    printf("Enter second number. > \n");
+    printf("Enter second number. > ");
     scanf("%d",&b);
 
     switch (option) {
