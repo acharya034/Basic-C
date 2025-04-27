@@ -2,7 +2,7 @@
 
 int main() {
     
-    int n = 100; // Example upto 100
+    int n = 100; // Example upto 100.
     printf("Prime number upto %dth term are:",n);
     for (int i = 2; i <= n; i++){
         int prime = 1;
