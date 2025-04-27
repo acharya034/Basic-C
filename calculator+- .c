@@ -1,17 +1,47 @@
 #include <stdio.h>
 
 int main() {
-    float r, A, C; // Variables for radius, area, and circumference
-    const float pi = 3.14159;  // Value of pi
+    char option; 
+    int a, b; // Variables for two numbers.
+    int ans;  // Variable for the answer.
 
-    printf("What's the radius of the circle? > ");
-    scanf("%f", &r);
+    printf("Choose an operation:\n");
+    printf("\t+ : Addition\n");
+    printf("\t- : Subtraction\n");
+    printf("\t* : Multiplication\n");
+    printf("\t/ : Division\n");
+    printf("Enter your choice: ");
+    scanf(" %c", &option);
 
-    A = pi * r * r; // Area = πr²
-    C = 2 * pi * r; // Circumference = 2πr
+    printf("Enter the first number: ");
+    scanf("%d", &a);
+    printf("Enter the second number: ");
+    scanf("%d", &b);
 
-    printf("Area of the circle: %.2f square units\n", A);
-    printf("Circumference of the circle: %.2f units\n", C);
+    switch (option) {
+        case '+':
+            ans = a + b;
+            printf("Result: %d + %d = %d\n", a, b, ans);
+            break;
+        case '-':
+            ans = a - b;
+            printf("Result: %d - %d = %d\n", a, b, ans);
+            break;
+        case '*':
+            ans = a * b;
+            printf("Result: %d * %d = %d\n", a, b, ans);
+            break;
+        case '/':
+            if (b != 0) {
+                ans = a / b;
+                printf("Result: %d / %d = %d\n", a, b, ans);
+            } else {
+                printf("Error: Division by zero is undefined.\n");
+            }
+            break;
+        default:
+            printf("Error: Invalid operator entered.\n");
+    }
 
     return 0;
 }
